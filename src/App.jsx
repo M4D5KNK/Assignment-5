@@ -1,6 +1,7 @@
 import './App.css'
-import HeaderSection from './components/HeaderSection.jsx'
-import HeroSection from './components/HeroSection.jsx'
+import FooterSection from './views/components/FooterSection.jsx'
+import HeaderSection from './views/components/HeaderSection.jsx'
+import HeroSection from './views/components/HeroSection.jsx'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
     <HeaderSection />
     <HeroSection />
+    <FooterSection />
     </>
   )
 }
