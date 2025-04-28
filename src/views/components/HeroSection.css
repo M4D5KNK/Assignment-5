@@ -45,11 +45,6 @@
     font-weight: 500;
 }
 
-.featured-movies-wrapper {
-    flex: 6;
-    display: flex;
-}
-
 /* ------------------------------------------------- */
 .movie-image-container {
     flex: 1;

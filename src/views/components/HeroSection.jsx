@@ -18,7 +18,6 @@ function HeroSection() {
                         <h3>More than 30,000 users have enjoyed our streaming services. Try now and begin you
                             experience!</h3>
                     </div>
-                    {/* Featured Movies Grid */}
                     <h2>Featured Now Playing</h2>
                     <div className="featured-wrapper">
                         <FeaturedSection />
@@ -35,7 +34,6 @@ function HeroSection() {
                     <button className="movie-button"><span className="movie-button-content">Watch Now</span></button>
                 </div>
             </div>
-            {/* ERROR */}
         </div>
     )
 }
