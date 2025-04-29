@@ -1,4 +1,7 @@
 import './HeaderSection.css'
+import { Link } from "react-router-dom";
+
+
 function HeaderSection() {
 
 
@@ -17,10 +20,12 @@ function HeaderSection() {
                         <li className="menu-list-item">Contact</li>
                     </ul>
                 </div>
-                <div className="sign-log">
+                <div className="register-log">
                     <ul>
-                        <img className="search-icon sign-log-item" src="icons8-search-48.png" alt="" />
-                        <img className="profile sign-log-item" src="pfp.jpg" alt="" />
+                        <button className="header-item">
+                            <Link to={`/login`} className="header-item">Login</Link>
+                        </button>
+                        <button className="header-item">Register</button>
                     </ul>
                 </div>
             </div>

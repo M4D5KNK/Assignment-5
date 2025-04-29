@@ -1,11 +1,12 @@
+.login-container{
+    display: flex;
+    background-color: #5e6681;
+    height:100vh;
+}
+
 .log-box {
-    flex: 3;
     position: relative;
-    width: 75%;
-    top: 5%;
     border-radius: 15px;
-    margin-bottom: 20%;
-    margin-right: 30px;
     font-size: 20px;
     color: white;
     padding: 1.9rem 1.2rem;
@@ -13,7 +14,21 @@
     background: rgba(0, 0, 0, 0.521);
 }
 
-/* Inputs */
+.register-box {
+    flex: 3;
+    position: relative;
+    width: 75%;
+    top: 5%;
+    border-radius: 15px;
+    margin-bottom: 20%;
+    margin-left: 30px;
+    font-size: 20px;
+    color: white;
+    padding: 1.9rem 1.2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.521);
+}
+
 .field {
     margin-top: .5rem;
     display: flex;
@@ -39,7 +54,6 @@
     color: #d3d3d3;
 }
 
-/*Text*/
 .title {
     margin-bottom: 1rem;
     font-size: 1.5em;
@@ -47,7 +61,6 @@
     color: #f5f5f5;
 }
 
-/*Buttons*/
 .btn {
     margin: 1rem;
     border: none;
@@ -58,7 +71,6 @@
     padding: 0.6em 1.2em;
     background-color: #e05a00;
     color: black;
-    /* box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%); */
     transition: all .3s ease-in-out;
 }
 
@@ -69,7 +81,6 @@
     transition: color .3s ease-out;
 }
 
-/*Hover & focus*/
 .field input:focus::placeholder {
     opacity: 0;
     transition: opacity .3s;

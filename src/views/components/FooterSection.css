@@ -2,6 +2,7 @@
     color: white;
     background-color: black;
     height: 150px;
+    width: 100%;
 }
 
 .footer-item {
@@ -10,7 +11,8 @@
 
 .social-links {
     position: relative;
-    left: 45%;
+    margin-left: 45%;
+
 }
 
 .social-link {

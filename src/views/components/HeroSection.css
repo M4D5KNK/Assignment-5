@@ -62,6 +62,8 @@
 .movie-image {
     height: 100%;
     right: 250px;
+    background-color: orangered;
+    overflow: hidden;
 }
 
 .movie-title {
