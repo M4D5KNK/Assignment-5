@@ -1,36 +1,29 @@
 .login-container{
     display: flex;
-    background-color: #5e6681;
-    height:100vh;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: url('../views/components/images/posters-background.jpg');
+    height:calc(100vh - 75px);
 }
+
 
 .log-box {
     position: relative;
+    width: 100%;
+    max-width: 400px; 
     border-radius: 15px;
     font-size: 20px;
     color: white;
     padding: 1.9rem 1.2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.521);
-}
-
-.register-box {
-    flex: 3;
-    position: relative;
-    width: 75%;
-    top: 5%;
-    border-radius: 15px;
-    margin-bottom: 20%;
-    margin-left: 30px;
-    font-size: 20px;
-    color: white;
-    padding: 1.9rem 1.2rem;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.521);
+    background: rgba(0, 0, 0, 0.932);
+    font-family: 'Roboto', sans-serif;
 }
 
 .field {
     margin-top: .5rem;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
