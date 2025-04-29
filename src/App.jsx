@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeView from "../src/views/HomeView";
-// import RegisterView from "../src/views/RegisterView";
+import RegisterView from "../src/views/RegisterView";
 import LoginView from "../src/views/LoginView";
 // import MoviesView from "../src/views/MoviesView";
 // import GenreLogin from "../src/views/GenreLogin"
@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeView />} />
-        {/* <Route path="/register" element={<RegisterView />} /> */}
+        <Route path="/register" element={<RegisterView />} />
         <Route path="/login" element={<LoginView />} />
         {/* <Route path="/movies" element={<MoviesView />}>
           <Route path="genre" element={<GenreLogin />} />

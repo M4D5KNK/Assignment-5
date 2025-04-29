@@ -1,7 +1,6 @@
-import './LoginView.css'
+import './LoginRegisterView.css'
 import HeaderSection from './components/HeaderSection';
 import { useNavigate } from 'react-router-dom';
-import { Link } from "react-router-dom";
 
 function LoginView() {
     const navigate = useNavigate();
@@ -14,10 +13,12 @@ function LoginView() {
 
     return (
         <div>
+            <div className='header-log-reg'>
             <HeaderSection />
+            </div>
             <form onSubmit={(e) => login(e)}>
-                <div className='login-container'>
-                    <div class="log-box">
+                <div className='log-reg-container'>
+                    <div class="log-reg-box">
                         <h4>Log In!</h4>
                         <div class="field">
                             <svg class="input-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
