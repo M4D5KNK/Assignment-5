@@ -1,10 +1,7 @@
 import './HeroSection.css'
 import Image1 from './Images/spider-verse-1280a-1542009456969_160w.jpg'
 import Image2 from './Images/Spider-Man-Into-The-Spider-Verse-Logo-PNG-Image.png'
-import FeaturedSection from './FeaturedSection';  // Adjust path as needed
-
-
-
+import FeaturedSection from './FeaturedSection';
 
 function HeroSection() {
 

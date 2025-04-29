@@ -25,7 +25,9 @@ function HeaderSection() {
                         <button className="header-item">
                             <Link to={`/login`} className="header-item">Login</Link>
                         </button>
-                        <button className="header-item">Register</button>
+                        <button className="header-item">
+                            <Link to={`/register`} className="header-item">Register</Link>
+                        </button>
                     </ul>
                 </div>
             </div>
