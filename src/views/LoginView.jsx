@@ -8,7 +8,7 @@ function LoginView() {
 
     function login(e) {
         e.preventDefault();
-        navigate('/movies/genre');
+        navigate('/movies');
     }
 
 
