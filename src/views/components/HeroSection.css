@@ -99,11 +99,9 @@
 }
 
 .movie-button:hover::before {
-    /* The scaleX() CSS function defines a transformation that resizes an element along the x-axis (horizontally). Its result is a <transform-function> data type. */
     transform: scaleX(1);
 }
 
-/* Lets the text 'watch now' be on the top of the button */
 .movie-button-content {
     position: relative;
     z-index: 1;
@@ -114,11 +112,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* The scaleX(0) is used to get rid of the grey, shrinking it until its gone */
     transform: scaleX(0);
     transform-origin: 0 50%;
     width: 100%;
-    /* inherit represents the computed value of the property on the element’s parent. */
     height: inherit;
     border-radius: inherit;
     background: linear-gradient(82.3deg,
@@ -127,11 +123,9 @@
     transition: all 0.475s;
 }
 
-/* * Featured Section Wrapper */ */
 .featured-wrapper {
   flex: 1;
   width: 100%;
   padding: 0 6%;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }

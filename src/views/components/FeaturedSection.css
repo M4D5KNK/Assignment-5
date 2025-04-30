@@ -1,11 +1,8 @@
 .featured-movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* Reduced min size */
   gap: 15px;
-  /* Smaller gap on small screens */
   padding: 60px;
-  /* Reduced padding */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -43,10 +40,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Inter', sans-serif;
+
 }
 
 .movie-card p {
   margin: 0 10px 12px;
   font-size: 0.9rem;
   color: #ddd;
+  font-family: 'Inter', sans-serif;
+
 }

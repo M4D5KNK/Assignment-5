@@ -2,10 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeView from "../src/views/HomeView";
 import RegisterView from "../src/views/RegisterView";
 import LoginView from "../src/views/LoginView";
-// import MoviesView from "../src/views/MoviesView";
-// import GenreLogin from "../src/views/GenreLogin"
-// import DetailsView from "../src/views/DetailsView";
+import MoviesView from "../src/views/MoviesView";
+import GenreView from "../src/views/GenreView"
+import DetailView from "../src/views/DetailView";
 import './App.css'
+import ErrorView from "./views/ErrorView";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
         <Route path="/" element={<HomeView />} />
         <Route path="/register" element={<RegisterView />} />
         <Route path="/login" element={<LoginView />} />
-        {/* <Route path="/movies" element={<MoviesView />}>
-          <Route path="genre" element={<GenreLogin />} />
-          <Route path=":id" element={<DetailsView />} />
-        </Route> */}
+         <Route path="/movies" element={<MoviesView />}>
+         <Route path="genre/:genre_id" element={<GenreView />} />
+         <Route path="details/:id" element={<DetailView />} />
+         </Route>
+         <Route path="*" element={<ErrorView />}/>
       </Routes>
     </BrowserRouter>
   )
