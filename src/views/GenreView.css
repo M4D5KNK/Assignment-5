@@ -20,30 +20,3 @@
     cursor: pointer;
     transition: background-color 0.2s;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .featured-movies-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .movie-card img {
-      height: 225px;
-    }
-    
-    .movie-card h3 {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .featured-movies-grid {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1rem;
-    }
-    
-    .movie-card img {
-      height: 180px;
-    }
-  }

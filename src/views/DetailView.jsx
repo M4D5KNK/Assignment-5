@@ -15,13 +15,13 @@ function DetailMovieView() {
                     axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}`),
                     axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}`)
                 ]);
+                console.log("Movie data:", movieResponse.data);
                 setMovie(movieResponse.data);
                 setTrailers(videosResponse.data.results.filter(video => video.type === "Trailer"));
             } catch (error) {
                 console.error("Error fetching movie details:", error);
             }
         }
-
         fetchMovieDetails();
     }, [id]);
 

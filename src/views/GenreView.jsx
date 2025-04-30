@@ -3,26 +3,10 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./GenreView.css";
 
-const genres = [
-  { genre: "Action", id: 28 },
-  { genre: "Adventure", id: 12 },
-  { genre: "Animation", id: 16 },
-  { genre: "Crime", id: 80 },
-  { genre: "Family", id: 10751 },
-  { genre: "History", id: 36 },
-  { genre: "Fantasy", id: 14 },
-  { genre: "Horror", id: 27 },
-  { genre: "Sci-Fi", id: 878 },
-  { genre: "Mystery", id: 9648 },
-];
-
 function GenreView() {
   const { genre_id } = useParams();
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
-  const selectedGenre = genres.find(genre => genre.id === parseInt(genre_id));
-  console.log(genre_id);
-  const genreName = selectedGenre ? selectedGenre.genre : "Movies in Genre";
 
   useEffect(() => {
     async function fetchMovies() {
