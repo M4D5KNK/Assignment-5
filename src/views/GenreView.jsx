@@ -24,7 +24,7 @@ function GenreView() {
 
   return (
     <div className="hero">
-      <div className="featured-movies-grid">
+      <div className="genre-movies-grid">
             {movies.map(movie => (
                 <div className="movie-card" key={movie.id}>
                    <Link to={`/movies/details/${movie.id}`}>

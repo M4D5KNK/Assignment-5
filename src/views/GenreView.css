@@ -3,6 +3,24 @@
     width: 100%;
   } */
 
+
+  .genre-movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    gap: 15px;
+    /* padding: 60px; */
+    max-width: 1200px;
+    margin: 2%;
+  }
+  
+  @media (max-width: 600px) {
+    .genre-movies-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+
   .genre-view-pagination-container {
     display: flex;
     justify-content: center;
