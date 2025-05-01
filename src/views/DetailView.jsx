@@ -6,24 +6,33 @@ import "./DetailView.css";
 function DetailMovieView() {
     const [trailers, setTrailers] = useState([]);
     const [movie, setMovie] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {
         async function fetchMovieDetails() {
             try {
+                setLoading(true);
                 const [movieResponse, videosResponse] = await Promise.all([
                     axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}`),
                     axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}`)
                 ]);
-                console.log("Movie data:", movieResponse.data);
                 setMovie(movieResponse.data);
                 setTrailers(videosResponse.data.results.filter(video => video.type === "Trailer"));
-            } catch (error) {
-                console.error("Error fetching movie details:", error);
+            } catch (err) {
+                setError(err);
+                console.error("Error fetching movie details:", err);
+            } finally {
+                setLoading(false);
             }
         }
         fetchMovieDetails();
     }, [id]);
+
+    if (loading) return <div className="movie-detail-container">Loading movie details...</div>;
+    if (error) return <div className="movie-detail-container">Error loading movie details</div>;
+    if (!movie) return <div className="movie-detail-container">No movie data found</div>;
 
     return (
         <div className="movie-detail-container">
@@ -57,19 +66,19 @@ function DetailMovieView() {
                             </div>
                             <div className="movie-meta-item">
                                 <span className="movie-meta-label">Language: </span>
-                                <span>{movie.original_language.toUpperCase()}</span>
+                                <span>{movie.original_language?.toUpperCase()}</span>
                             </div>
                             <div className="movie-meta-item">
                                 <span className="movie-meta-label">Rating: </span>
-                                <span>{movie.vote_average.toFixed(1)}</span>
+                                <span>{movie.vote_average?.toFixed(1)}</span>
                             </div>
                             <div className="movie-meta-item">
                                 <span className="movie-meta-label">Popularity: </span>
-                                <span>{movie.popularity.toFixed(1)}</span>
+                                <span>{movie.popularity?.toFixed(1)}</span>
                             </div>
                             <div className="movie-meta-item">
                                 <span className="movie-meta-label">Box Office: </span>
-                                <span>${movie.revenue.toLocaleString()}</span>
+                                <span>${movie.revenue?.toLocaleString()}</span>
                             </div>
                         </div>
                     </div>
