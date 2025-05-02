@@ -20,7 +20,7 @@ function FeaturedSection() {
     }, []);
 
     return (
-        <div className="featured-movies-grid">
+        <div className="featured-movies-display">
             {movies.map(movie => (
                 <div className="movie-card" key={movie.id}>
                     <img 
